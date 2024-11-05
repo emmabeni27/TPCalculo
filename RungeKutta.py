@@ -51,7 +51,7 @@ def verificar_impacto(estado_final, tolerancia_radial=10000):  # tolerancia de 1
     return impacto, diferencia_radial / 1000  # Convertimos a km
 
 # Ejecutar la simulación con una velocidad específica
-velocidad_inicial = 1996.71  # m/s
+velocidad_inicial = 1196.71  # m/s
 estado_final = simular_trayectoria(velocidad_inicial)
 
 # Verificar impacto y mostrar resultados
