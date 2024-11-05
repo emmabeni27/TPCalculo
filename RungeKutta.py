@@ -6,6 +6,12 @@ M = 5.972e24  # Masa de la Tierra (kg)
 posicion_radial_asteroide = 850750000  # Posición radial del asteroide (m)
 posicion_angular_asteroide = 1.884955592  # Posición angular del asteroide (rad)
 
+#r?s 1e7
+#posic asteroide 2e7
+#v0 7e3
+#v1 8e3
+#
+
 def sistema_ecuaciones(t, estado):
     r, theta, vr, vtheta = estado
     drdt = vr
@@ -51,7 +57,7 @@ def verificar_impacto(estado_final, tolerancia_radial=10000):  # tolerancia de 1
     return impacto, diferencia_radial / 1000  # Convertimos a km
 
 # Ejecutar la simulación con una velocidad específica
-velocidad_inicial = 1996.71  # m/s
+velocidad_inicial = 1196.71   # m/s
 estado_final = simular_trayectoria(velocidad_inicial)
 
 # Verificar impacto y mostrar resultados
@@ -71,3 +77,5 @@ if impacto:
 else:
     print(f"NO HAY IMPACTO")
     print(f"Diferencia con el objetivo radial: {diferencia_radial_km:.2f} km")
+    #distintos delta
+    # #rb posicion asteoride a punto de sisparart

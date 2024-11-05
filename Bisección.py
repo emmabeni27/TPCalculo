@@ -1,5 +1,5 @@
 import numpy as np
-
+#VOLVER A HACER CON SECANTES
 # Constantes
 G = 6.67430e-11  # Constante gravitacional (m^3 kg^-1 s^-2)
 M = 5.972e24  # Masa de la Tierra (kg)
