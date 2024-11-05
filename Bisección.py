@@ -16,26 +16,6 @@ def sistema_ecuaciones(t, estado):
     dvthetadt = -vr * vtheta / r
     return np.array([drdt, dthetadt, dvrdt, dvthetadt])
 
-
-def runge_kutta_4(f, t0, y0, h, num_steps):
-    t = t0
-    y = y0
-
-    for step in range(num_steps):
-        k1 = h * f(t, y)
-        k2 = h * f(t + h / 2, y + k1 / 2)
-        k3 = h * f(t + h / 2, y + k2 / 2)
-        k4 = h * f(t + h, y + k3)
-        y = y + (k1 + 2 * k2 + 2 * k3 + k4) / 6
-        t += h
-
-        # Verificar si estamos en la posición angular del asteroide
-        if abs(y[1] - posicion_angular_asteroide) < 0.001:
-            return y
-
-    return y
-
-
 def simular_trayectoria(velocidad_inicial, h=50, num_steps=10000):
     # Condiciones iniciales
     r0 = 415000000  # Posición radial inicial del satélite (m)
