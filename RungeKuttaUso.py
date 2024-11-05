@@ -76,4 +76,3 @@ for value in h:
         print(f"Diferencia con el objetivo radial: {diferencia_radial_km:.2f} km")
         #distintos delta
         # #rb posicion asteoride a punto de sisparart
-#commit and push
