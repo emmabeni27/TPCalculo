@@ -1,5 +1,6 @@
 import numpy as np
-#VOLVER A HACER CON SECANTES
+import RungeKutta4
+
 # Constantes
 G = 6.67430e-11  # Constante gravitacional (m^3 kg^-1 s^-2)
 M = 5.972e24  # Masa de la Tierra (kg)
@@ -44,7 +45,7 @@ def simular_trayectoria(velocidad_inicial, h=50, num_steps=10000):
     estado_inicial = np.array([r0, theta0, vr0, vtheta0])
 
     # Ejecutar la simulación hasta la posición angular del asteroide
-    estado_final = runge_kutta_4(sistema_ecuaciones, 0, estado_inicial, h, num_steps)
+    estado_final = RungeKutta4.runge_kutta_4(sistema_ecuaciones, 0, estado_inicial, h, num_steps)
     return estado_final
 
 
