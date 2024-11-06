@@ -32,7 +32,7 @@ def runge_kutta_4(f, t0, y0, h, num_steps):
 
 def simular_trayectoria(v0, h, num_steps=10000):
     r0 = 415000000  # Posición radial inicial del satélite (m)
-    theta0 = 0  # Posición angular inicial del satélite
+    theta0 = 1.884955592  # Posición angular inicial del satélite
     vr0 = v0  # Velocidad radial inicial
     vtheta0 = 0  # Velocidad angular inicial
     estado_inicial = np.array([r0, theta0, vr0, vtheta0])
